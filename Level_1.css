@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1f1f1f;
+}
+
+#game-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #fff;
+}
+
+#timer {
+    font-size: 20px;
+    margin: 10px;
+    color: #007bff;
+}
+
+#email-subject {
+    font-size: 20px;
+    margin: 20px;
+    color: #fff;
+}
+
+#user-input {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#check-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#result {
+    font-size: 18px;
+    margin: 20px;
+}
+
+#score {
+    font-size: 20px;
+    margin: 10px;
+}
+
+#restart-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#restart-button:hover {
+    background-color: #218838;
+}
