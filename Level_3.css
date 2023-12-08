@@ -1,0 +1,85 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+}
+
+#game-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+#timer {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#email-attachment {
+  background-color: #34495e;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#user-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#check-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#check-button:hover {
+  background-color: #2980b9;
+}
+
+#result {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+#score {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+#restart-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#restart-button:hover {
+  background-color: #c0392b;
+}
