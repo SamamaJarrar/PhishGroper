@@ -1,85 +1,84 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #1f1f1f;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #1f1f1f;
 }
 
 #game-container {
-  max-width: 800px;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 20px;
   background-color: #2c3e50;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 400px;
 }
 
 h1 {
   color: #fff;
-  text-align: center;
 }
 
 #timer {
-  color: #fff;
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin: 10px;
+  color: #007bff;
 }
 
 #email-attachment {
-  background-color: #34495e;
+  font-size: 20px;
+  margin: 20px;
   color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
 }
 
 #user-input {
-  width: 100%;
+  font-size: 18px;
   padding: 10px;
-  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-sizing: border-box;
 }
 
 #check-button {
-  display: block;
-  margin: 10px auto;
+  font-size: 16px;
   padding: 10px 20px;
-  background-color: #3498db;
+  background-color: #007bff;
   color: #fff;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-#check-button:hover {
-  background-color: #2980b9;
-}
-
-#result {
-  text-align: center;
-  color: #fff;
-  font-size: 1.2em;
+  cursor: pointer;
   margin-top: 10px;
 }
 
+#check-button:hover {
+  background-color: #218838;
+}
+
+#result {
+  font-size: 18px;
+  margin: 20px;
+}
+
 #score {
-  text-align: center;
-  color: #fff;
-  margin-top: 20px;
-  font-size: 1.5em;
+  font-size: 20px;
+  margin: 10px;
 }
 
 #restart-button {
-  display: block;
-  margin: 20px auto;
+  font-size: 16px;
   padding: 10px 20px;
-  background-color: #e74c3c;
+  background-color: #28a745;
   color: #fff;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 #restart-button:hover {
-  background-color: #c0392b;
+  background-color: #218838;
 }

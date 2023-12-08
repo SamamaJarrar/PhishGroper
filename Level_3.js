@@ -96,21 +96,28 @@ function playGame() {
   checkButton.addEventListener("click", function () {
       if (timer > 0) {
           const userInput = userInputElement.value.toLowerCase();
-          if ((userInput === "yes" && isRiskAttachment(emailAttachment)) ||
-              (userInput === "no" && !isRiskAttachment(emailAttachment))) {
-              resultElement.textContent = "Correct! This attachment may pose a risk.";
-              resultElement.style.color = "green";
-              score++;
-              document.getElementById("score-count").textContent = score;
+          
+          // Validate user input
+          if (userInput === "yes" || userInput === "no") {
+              if ((userInput === "yes" && isRiskAttachment(emailAttachment)) ||
+                  (userInput === "no" && !isRiskAttachment(emailAttachment))) {
+                  resultElement.textContent = "Correct! This attachment may pose a risk.";
+                  resultElement.style.color = "green";
+                  score++;
+                  document.getElementById("score-count").textContent = score;
+              } else {
+                  resultElement.textContent = "Oops! You made a mistake. This attachment is not a significant risk.";
+                  resultElement.style.color = "red";
+                  // Show a message for the wrong answer
+                  setTimeout(function () {
+                      resultElement.textContent = "";
+                  }, 2000); // Hide the message after 2 seconds
+              }
+              generateEmailAttachment();
           } else {
-              resultElement.textContent = "Oops! You made a mistake. This attachment is not a significant risk.";
-              resultElement.style.color = "red";
-              // Show a message for the wrong answer
-              setTimeout(function () {
-                  resultElement.textContent = "";
-              }, 2000); // Hide the message after 2 seconds
+              // Show an alert for wrong input
+              alert("Please enter 'yes' or 'no'");
           }
-          generateEmailAttachment();
       }
   });
 }

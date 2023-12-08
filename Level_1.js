@@ -98,21 +98,28 @@ function playGame() {
     checkButton.addEventListener("click", function () {
         if (timer > 0) {
             const userInput = userInputElement.value.toLowerCase();
-            if ((userInput === "yes" && isPhishing(emailSubject)) ||
-                (userInput === "no" && !isPhishing(emailSubject))) {
-                resultElement.textContent = "Correct! This email is not a phishing attempt.";
-                resultElement.style.color = "green";
-                score++;
-                document.getElementById("score-count").textContent = score;
+            
+            // Validate user input
+            if (userInput === "yes" || userInput === "no") {
+                if ((userInput === "yes" && isPhishing(emailSubject)) ||
+                    (userInput === "no" && !isPhishing(emailSubject))) {
+                    resultElement.textContent = "Correct! This email is not a phishing attempt.";
+                    resultElement.style.color = "green";
+                    score++;
+                    document.getElementById("score-count").textContent = score;
+                } else {
+                    resultElement.textContent = "Oops! You made a mistake. This was a phishing attempt.";
+                    resultElement.style.color = "red";
+                    // Show a message for the wrong answer
+                    setTimeout(function () {
+                        resultElement.textContent = "";
+                    }, 2000); // Hide the message after 2 seconds
+                }
+                generateEmailSubject();
             } else {
-                resultElement.textContent = "Oops! You made a mistake. This was a phishing attempt.";
-                resultElement.style.color = "red";
-                // Show a message for the wrong answer
-                setTimeout(function () {
-                    resultElement.textContent = "";
-                }, 2000); // Hide the message after 2 seconds
+                // Show an alert for wrong input
+                alert("Please enter 'yes' or 'no'");
             }
-            generateEmailSubject();
         }
     });
 }

@@ -98,21 +98,28 @@ function playGame() {
   checkButton.addEventListener("click", function () {
       if (timer > 0) {
           const userInput = userInputElement.value.toLowerCase();
-          if ((userInput === "yes" && isPhishing(emailLink)) ||
-              (userInput === "no" && !isPhishing(emailLink))) {
-              resultElement.textContent = "Correct! This link is safe.";
-              resultElement.style.color = "green";
-              score++;
-              document.getElementById("score-count").textContent = score;
+          
+          // Validate user input
+          if (userInput === "yes" || userInput === "no") {
+              if ((userInput === "yes" && isPhishing(emailLink)) ||
+                  (userInput === "no" && !isPhishing(emailLink))) {
+                  resultElement.textContent = "Correct! This link is safe.";
+                  resultElement.style.color = "green";
+                  score++;
+                  document.getElementById("score-count").textContent = score;
+              } else {
+                  resultElement.textContent = "Oops! You made a mistake. This link is suspicious.";
+                  resultElement.style.color = "red";
+                  // Show a message for the wrong answer
+                  setTimeout(function () {
+                      resultElement.textContent = "";
+                  }, 2000); // Hide the message after 2 seconds
+              }
+              generateEmailLink();
           } else {
-              resultElement.textContent = "Oops! You made a mistake. This link is suspicious.";
-              resultElement.style.color = "red";
-              // Show a message for the wrong answer
-              setTimeout(function () {
-                  resultElement.textContent = "";
-              }, 2000); // Hide the message after 2 seconds
+              // Show an alert for wrong input
+              alert("Please enter 'yes' or 'no'");
           }
-          generateEmailLink();
       }
   });
 }
