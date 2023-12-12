@@ -14,6 +14,10 @@ const scenarios = [
   "A cybersecurity awareness message recommends enabling 2FA to enhance account protection.",
 ];
 
+document.getElementById('home-button').addEventListener('click', function() {
+  // Redirect to the home screen
+  window.location.href = '../Main Page/PhishGroper_MainPage.html';});
+
 
 let score = 0;
 let timer = 30;

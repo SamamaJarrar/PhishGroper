@@ -14,6 +14,10 @@ const emailSubjects = [
     "Reminder: Pay your utility bill",
 ];
 
+document.getElementById('home-button').addEventListener('click', function() {
+    // Redirect to the home screen
+    window.location.href = '../Main Page/PhishGroper_MainPage.html';});
+
 let score = 0;
 let timer = 30;
 let emailSubject = "";
